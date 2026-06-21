@@ -601,10 +601,6 @@ app.whenReady().then(() => {
 
     createWindow();
 
-    setTimeout(() => {
-        showReminderNotification({ title: "Notificação de Teste", pet_name: null });
-    }, 3000);
-
     // SAVE PET
     ipcMain.handle(
         "save-pet",
