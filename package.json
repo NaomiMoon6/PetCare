@@ -23,12 +23,16 @@
   },
 
   "build": {
-  "appId": "com.petcare.app",
-  "files": [
-    "**/*"
-  ],
-  "mac": {
-    "target": "dmg"
-  }
+    "appId": "com.petcare.app",
+    "productName": "PetCare",
+    "files": ["**/*", "!pets.db"],
+    "asarUnpack": ["node_modules/sqlite3/**/*"],
+    "mac": {
+      "target": "dmg",
+      "category": "public.app-category.utilities"
+    },
+    "win": {
+      "target": "nsis"
+    }
   }
 }
