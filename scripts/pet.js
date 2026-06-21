@@ -70,15 +70,33 @@ document.getElementById("delete")
 
 const previewBox = document.querySelector(".big-image");
 
-function setPreviewImage(imagePath) {
+function resolvePhotoSrc(photo) {
+
+    if(!photo){
+        return null;
+    }
+
+    if(photo.startsWith("assets/")){
+        return "../" + photo;
+    }
+
+    return window.petAPI && petAPI.toFileUrl
+        ? petAPI.toFileUrl(photo)
+        : "file://" + photo;
+
+}
+
+function setPreviewImage(photo) {
 
     if(!previewBox){
         return;
     }
 
+    const src = resolvePhotoSrc(photo);
+
     previewBox.style.backgroundImage =
-        imagePath
-        ? `url("../${imagePath}")`
+        src
+        ? `url("${src}")`
         : "";
 
 }

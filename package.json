@@ -27,12 +27,17 @@
     "productName": "PetCare",
     "files": ["**/*", "!pets.db"],
     "asarUnpack": ["node_modules/sqlite3/**/*"],
+    "publish": {
+      "provider": "github"
+    },
     "mac": {
       "target": "dmg",
-      "category": "public.app-category.utilities"
+      "category": "public.app-category.utilities",
+      "icon": "build/icon.icns"
     },
     "win": {
-      "target": "nsis"
+      "target": "nsis",
+      "icon": "build/icon.ico"
     }
   }
 }

@@ -90,6 +90,22 @@ document.getElementById("settings")
     }
 );
 
+function resolvePhotoSrc(photo) {
+
+    if(!photo){
+        return null;
+    }
+
+    if(photo.startsWith("assets/")){
+        return "../" + photo;
+    }
+
+    return window.petAPI && petAPI.toFileUrl
+        ? petAPI.toFileUrl(photo)
+        : "file://" + photo;
+
+}
+
 function createMessageCard(message) {
 
     const card =
@@ -143,7 +159,7 @@ function createPetCard(pet) {
         "card-image";
 
         image.src =
-        "../" + pet.photo;
+        resolvePhotoSrc(pet.photo);
 
         image.alt =
         pet.name;
@@ -311,7 +327,7 @@ async function loadPets() {
     if(!container){
         return;
     }
-    
+
     reminderRefreshers.length = 0;
 
     container.innerHTML =

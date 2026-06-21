@@ -1,6 +1,5 @@
 const { contextBridge, ipcRenderer, webUtils } = require("electron");
 
-
 contextBridge.exposeInMainWorld(
 "petAPI",
 {
@@ -24,6 +23,17 @@ contextBridge.exposeInMainWorld(
         return webUtils.getPathForFile(file);
     },
 
+    toFileUrl:(filePath)=>{
+
+        let normalized = filePath.replace(/\\/g, "/");
+
+        if(!normalized.startsWith("/")){
+            normalized = "/" + normalized;
+        }
+
+        return "file://" + encodeURI(normalized);
+
+    },
 
     getPets:()=>{
 

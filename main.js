@@ -145,11 +145,11 @@ function savePetImage(pet) {
     }
 
     const imageFolder =
-    path.join(__dirname, "images");
+    path.join(app.getPath("userData"), "images");
 
 
     if(!fs.existsSync(imageFolder)){
-        fs.mkdirSync(imageFolder);
+        fs.mkdirSync(imageFolder, { recursive: true });
     }
 
 
@@ -170,13 +170,13 @@ function savePetImage(pet) {
     );
 
 
-    return "images/" + safeImageName;
+    return newImage;
 
 }
 
 function clearPetImages() {
 
-    const imageFolder = path.join(__dirname, "images");
+    const imageFolder = path.join(app.getPath("userData"), "images");
 
     if(!fs.existsSync(imageFolder)){
         return;
