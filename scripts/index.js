@@ -304,9 +304,6 @@ async function loadNextVaccine(pet_id, element) {
 
 async function loadPets() {
 
-    container.innerHTML = "";
-    reminderRefreshers.length = 0;
-
     const container =
     document.getElementById("pets-container");
 
@@ -314,7 +311,8 @@ async function loadPets() {
     if(!container){
         return;
     }
-
+    
+    reminderRefreshers.length = 0;
 
     container.innerHTML =
     "";
