@@ -22,8 +22,6 @@ Desenvolvido como trabalho da faculdade de Análise e Desenvolvimento de Sistema
 - Upload de imagens + imagens padrão;
 
 ### Em Andamento
-- Consertar exibição de vacinas na página principal;
-- Consertar exclusão total (apagar imagens também) e adicionar refresh;
 - Ativar Notificações;
 
 ### Updates Futuros
