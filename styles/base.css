@@ -1,0 +1,45 @@
+/*
+  CONTENT:
+  - body, h1, h2,h3, h4, p, a
+  - a
+  - *
+  - .page
+*/
+
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+  margin: 0;
+  font-size: 100%;
+  font-weight: normal;
+  text-decoration: none;
+  color: var(--text);
+}
+
+a{
+  text-align: center;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+a.back-button{
+  line-height: 130px;
+}
+
+a.add-card{
+  line-height: 70px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  font-family: "Varela", sans-serif;
+  background: var(--bg);
+}

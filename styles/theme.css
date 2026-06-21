@@ -1,0 +1,79 @@
+/*
+  CONTENT:
+  - Fonts
+    - Coiny
+    - Concert One
+    - Varela
+    
+  - Light and Dark Theme
+    - :root
+    - .dark
+*/
+
+/* Fonts */
+
+@font-face {
+  font-family: "Coiny";
+  src: url(../fonts/Coiny-Regular.ttf) format("truetype"),
+    url(./fonts/Coiny-Regular.ttf) format("woff");
+}
+
+@font-face {
+  font-family: "Concert One";
+  src: url(../fonts/ConcertOne-Regular.ttf) format("truetype"),
+    url(./fonts/ConcertOne-Regular.ttf) format("woff");
+}
+
+@font-face {
+  font-family: "Varela";
+  src: url(../fonts/VarelaRound-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url(../fonts/Nunito-VariableFont.ttf) format("truetype");
+}
+
+/* Light and Dark Mode */
+
+:root {
+    --bg: #f5eefe;
+    --bg2: #f5eefe;
+    --box: #e7d6fe;
+    --accent: #d3affc;
+    --text: #45066a;
+    --text2: #a367cf;
+    --highlight: #9319da;
+    --extra: #a367cf;
+    --bg-blur: rgba(245, 238, 254, 0.25);
+    --shine: #f5eefe;
+    --shadow: rgba(31, 1, 51, 0.25);
+}
+
+.dark {
+    --bg: #1f0133;
+    --bg2: #3f1957;
+    --box: #a686cb;
+    --accent: #d3affc;
+    --text: #f5eefe;
+    --text2: #bb85e2;
+    --highlight: #9319da;
+    --extra: #7b35ad;
+    --bg-blur: rgba(31, 1, 51, 0.25);
+
+  .half-button1 {
+    color: var(--bg) !important;
+  }
+
+  .half-button2 {
+    color: var(--bg) !important;
+  }
+
+    .half-button1:hover {
+    color: var(--text) !important;
+  }
+
+  .half-button2:hover {
+    color: var(--text) !important;
+  }
+}

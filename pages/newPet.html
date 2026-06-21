@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PetCare</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="icon" type="image/png" href="../assets/Logo.png" />
+    <script src="../scripts/theme.js" defer></script>
+  </head>
+  <body class="page">
+    <div class="top-bar">
+      <img class="logo" src="../assets/Logo.svg" alt="LOGO">
+      <h1 class="header-title"> PetCare </h1>
+    </div>
+
+    <form id="petForm">
+    <section class="content">
+        <div class="sub-bar">
+            <a class="small-button back-button" href="index.html"> 
+              <svg xmlns="http://www.w3.org/2000/svg" height="45px" viewBox="0 -960 960 960" width="45px" fill="var(--text)"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+            </a>
+              <h2 class="sub-title"> Adicionar Pet </h2> 
+            <button class="small-button theme-button" id="toggle"> 
+              <svg xmlns="http://www.w3.org/2000/svg" height="45px" viewBox="0 -960 960 960" width="45px" fill="var(--text)"><path d="M480-28 346-160H160v-186L28-480l132-134v-186h186l134-132 134 132h186v186l132 134-132 134v186H614L480-28Zm0-252q83 0 141.5-58.5T680-480q0-83-58.5-141.5T480-680v400Zm0 140 100-100h140v-140l100-100-100-100v-140H580L480-820 380-720H240v140L140-480l100 100v140h140l100 100Zm0-340Z"/></svg>
+            </button>
+        </div>
+      
+      <div class="half-page1">
+        <div class="form">
+              <input class="name-field" type="text" name="nome" placeholder="Nome do pet." required>
+
+            <div class="field">
+                <label for="especie">Espécie</label>
+                <select id="especie" name="especie">
+                <option value="" disabled selected>Selecione uma opção</option>
+                <option value="Gato">Gato</option>
+                <option value="Cachorro">Cachorro</option>
+                <option value="Coelho">Coelho</option>
+                <option value="Roedor">Roedor</option>
+                <option value="Ave">Ave</option>
+                <option value="Reptil">Réptil</option>
+                <option value="Outro">Outro</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="sexo">Sexo</label>
+                <select id="sexo" name="sexo">
+                <option value="" disabled selected>Selecione uma opção</option>
+                <option value="Feminino">Feminino</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Outro">Outro</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="data">Data de Nascimento </label>
+                <input type="date" name="dataNasc"  required>
+            </div>
+            
+            <div class="field">
+                <label for="foto">Foto</label>
+                <input type="file" id="file-upload" accept="image/*">
+            </div> 
+        </div>
+      </div>
+
+      <div class="half-page2">
+            <div class="big-image"> </div>
+          <div class="box">
+            <div class="field">
+                <button type="submit" class="half-button1" >Salvar Dados</button>
+                <button type="reset" class="half-button2">Limpar Campos</button>
+            </div>
+          </div> 
+      </div>
+
+      <script src="../scripts/newPet.js"></script>
+
+    </section>
+    </form>
+  </body>
+</html>

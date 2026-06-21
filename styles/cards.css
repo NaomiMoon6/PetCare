@@ -1,0 +1,97 @@
+/*
+  CONTENT:
+  - .card
+  - .card:hover
+  - .card-title
+  - .card-text
+  - .card-image
+  - .add-card
+  - .add-card-title
+  - .add-card-image
+*/
+
+
+.card {
+  width: 350px;
+  margin: 10px 20px 60px 20px;
+  padding: 45px;
+  background: var(--box);
+  box-shadow: 4px 4px 5px var(--accent);
+  border-radius: 45px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.10);
+  background: var(--accent);
+  box-shadow: 4px 4px 10px var(--accent);
+
+  .card-image{
+    filter: drop-shadow(3px 3px 5px var(--shine));
+  }
+
+  .add-card-image{
+    filter: drop-shadow(3px 3px 5px var(--shine));
+  }
+}
+
+.card-title {
+  font-family: "Concert One";
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--text);
+  overflow-wrap: break-word;
+  max-width: 300px;
+}
+
+.card-subtitle {
+  font-family: "Varela";
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: var(--extra);
+  overflow-wrap: break-word;
+  max-width: 300px;
+}
+
+.card-text{
+  font-size: 18px;
+  color: var(--extra);
+  line-height: 25px;
+  margin-top: 5px;
+}
+
+.card-image{
+  width: 100%;
+  margin-bottom: 25px;
+  height: 250px;
+  border-radius: 30px;
+  border: solid 3px var(--accent);
+  -webkit-user-drag: none;
+  user-select: none;
+  object-fit: cover;
+  object-position: center;
+}
+
+.add-card{
+  text-decoration: none;
+}
+
+.add-card-title {
+  font-family: "Concert One";
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--text);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.add-card-image{
+  width: 100%;
+  height: 250px;
+  border-radius: 30px;
+  border: solid 3px var(--accent);
+  margin: 5px auto;
+  -webkit-user-drag: none;
+  user-select: none;
+}

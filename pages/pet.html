@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PetCare</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="icon" type="image/png" href="../assets/Logo.png" />
+    <script src="../scripts/theme.js" defer></script>
+  </head>
+  <body class="page">
+    <div class="top-bar">
+      <img class="logo" src="../assets/Logo.svg" alt="LOGO">
+      <h1 class="header-title"> PetCare </h1>
+    </div>
+
+    <div class="action-bar">
+      <a class="small-button back-button" href="index.html"> 
+        <svg xmlns="http://www.w3.org/2000/svg" height="45px" viewBox="0 -960 960 960" width="45px" fill="var(--text)"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+      </a>
+      <button class="small-button theme-button" id="toggle"> 
+        <svg xmlns="http://www.w3.org/2000/svg" height="45px" viewBox="0 -960 960 960" width="45px" fill="var(--text)"><path d="M480-28 346-160H160v-186L28-480l132-134v-186h186l134-132 134 132h186v186l132 134-132 134v186H614L480-28Zm0-252q83 0 141.5-58.5T680-480q0-83-58.5-141.5T480-680v400Zm0 140 100-100h140v-140l100-100-100-100v-140H580L480-820 380-720H240v140L140-480l100 100v140h140l100 100Zm0-340Z"/></svg>
+      </button>
+    </div>
+
+    <section class="content">
+        <div class="half-page1">
+              <div id="pet-container"></div> 
+        </div>
+
+        <div class="half-page2">
+            <div class="big-image"> 
+              <input class="edit-photo hidden" type="file" id="file-upload" accept="image/*">
+            </div>
+            <div class="box">
+            <div class="field">
+                <button id="edit" class="half-button1" >Editar Dados</button>
+                <button id="delete" class="half-button2">Excluir Pet</button>
+            </div>
+        </div>
+        </div>
+
+        <h2 class="sub-title"> Lembretes </h2> 
+        <div class="big-box">
+          
+          <div id="reminders-list" class="reminders-list"></div>
+
+          <button id="openPopup" class="small-button button-contrast"> 
+            <img class="plus" src="../assets/Add.svg" alt="Add" />
+          </button>
+          
+          <div id="popup-shadow" class="popup-shadow hidden">
+            <div id="popup" class="popup hidden">
+              <button id="closePopup" class="small-button button-contrast">
+                <img class="plus close" src="../assets/Add.svg" alt="Add" />
+              </button>
+
+              <h2 class="sub-title" id="popupTitle">Novo Lembrete</h2>
+
+              <div class="form">
+                <form  id="reminderForm">
+                  <input id="nome" class="name-field" type="text" name="nome" placeholder="Ração, Água, Caixa de Areia etc." required>
+
+                    <div class="field">
+                        <label for="data">Data do Lembrete</label>
+                        <input id="data" type="datetime-local" name="data" required>
+                    </div>
+
+                    <div class="field">
+                      <label class="one-line" for="repeticao">Repetir:</label>
+                      <input class="check" type="checkbox" id="myCheckbox">
+                    </div>
+
+                    <div class="field">
+                      <p class="item-text hidden repeat"> 1 vez(es) a cada </p>
+                      <input id="quantidade" class="number-field hidden repeat" type="number" name="quantidade" placeholder="-">
+
+                      <select id="repeticao" class="hidden repeat" name="repeticao">
+                      <option value="" disabled selected> --- </option>
+                      <option value="h">Hora(s)</option>
+                      <option value="d">Dia(s)</option>
+                      <option value="w">Semana(s)</option>
+                      </select>
+                    </div>
+                    
+                    <button type="submit" class="small-button button-contrast long-button">
+                      <img class="plus" src="../assets/Add.svg" alt="Add" />
+                      <p id="popupSubmitLabel"> Adicionar Lembrete </p>
+                    </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="sub-title"> Vacinas </h2> 
+          <div class="big-box">
+
+            <div id="vaccines-list" class="reminders-list"></div>
+
+            <button id="openPopup2" class="small-button button-contrast"> 
+              <img class="plus" src="../assets/Add.svg" alt="Add" />
+            </button>
+            
+            <div id="vaccine-popup-shadow" class="popup-shadow hidden">
+              <div id="vaccine-popup" class="popup long hidden">
+                <button id="closeVaccinePopup" class="small-button button-contrast">
+                  <img class="plus close" src="../assets/Add.svg" alt="Add" />
+                </button>
+
+                <h2 class="sub-title" id="vaccinePopupTitle">Nova Vacina</h2>
+
+                <div class="form">
+                  <form id="vaccineForm">
+                    <input id="vaccineNome" class="name-field" type="text" name="nome" placeholder="Nome da vacina" required>
+
+                      <div class="field">
+                          <label for="vaccineData">Data de Aplicação</label>
+                          <input id="vaccineData" type="date" name="data" required>
+                      </div>
+
+                      <div class="field">
+                          <label for="vaccineMedico">Veterinário Responsável</label>
+                          <input id="vaccineMedico" type="text" name="medico" placeholder="Nome do veterinário">
+                      </div>
+
+                      <div class="field">
+                        <label class="one-line" for="vaccineProximaDose">Definir próxima dose?</label>
+                        <input class="check2" type="checkbox" id="vaccineCheckbox">
+                      </div>
+
+                      <div class="field">
+                        <label class="item-text hidden vaccine-repeat" for="vaccineProximaDose">Data da próxima dose</label>
+                        <input id="vaccineProximaDose" class="hidden vaccine-repeat" type="date" name="proximaDose">
+                      </div>
+                      
+                      <button type="submit" class="small-button button-contrast long-button">
+                        <img class="plus" src="../assets/Add.svg" alt="Add" />
+                        <p id="vaccinePopupSubmitLabel"> Adicionar Vacina </p>
+                      </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      <script src="../scripts/pet.js"></script>
+
+    </section>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+/*
+  CONTENT:
+  - .header-title
+  - .sub-title
+  - .item-title
+  - .item-text
+*/
+
+.header-title {
+  font-family: "Coiny";
+  font-size: 110px;
+  line-height: 100px;
+  color: #f5eefe;;
+  text-transform: uppercase;
+  padding-top: 22px;
+  display: inline-block;
+  text-shadow: 3px 3px 3px var(--highlight);
+  vertical-align: top;
+}
+
+.sub-title {
+  font-family: "Concert One";
+  font-size: 60px;
+  line-height: 140px;
+  color: var(--text);
+  text-transform: uppercase;
+  line-height: 140px;
+  margin: auto 40px;
+  display: inline-block;
+  width: 75%;
+}
+
+.item-title{
+  font-size: 30px;
+  line-height: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.item-text{
+  font-size: 25px;
+  line-height: 50px;
+  margin-left: 10px;
+  color: var(--extra);
+}
+
+.one-line{
+  display: inline-block;
+}
+
+.center{
+  margin: auto;
+  text-align: center;
+  width: 100%;
+}
+
+.bold{
+  font-family: "Nunito";
+  font-weight: 900;
+  color: var(--text);
+}

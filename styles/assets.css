@@ -1,0 +1,91 @@
+/*
+  CONTENT:
+  - .logo
+  - .big-image
+  - .tag
+  - .tag-text
+*/
+
+.logo{
+  width: 100px;
+  margin: 10px;
+  height: 100px;
+  filter: drop-shadow(3px 3px 3px var(--highlight));
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.big-image{
+  background-image: url(../assets/Paws.svg);
+  background-size: cover;
+  background-repeat: space;
+  background-position: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  border: solid 5px var(--extra);
+  border-radius: 45px;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.tag{
+  background-color: var(--box);
+
+  -webkit-mask-image: url("../assets/Tag.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: cover;
+
+  mask-image: url("../assets/Tag.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
+
+  filter: drop-shadow(4px 4px 8px var(--accent));
+  
+  margin: auto;
+  display: flex;
+  width: 100%;
+  min-width: fit-content;
+  min-height: 150px;
+  height: fit-content;
+  align-items: center;
+  border-radius: 45px;
+}
+
+.tag-shadow {
+  filter: drop-shadow(4px 4px 4px var(--accent));
+}
+
+.tag-text{
+  font-family: "Concert One";
+  font-size: 50px;
+  line-height: 50px;
+  color: var(--text);
+  text-transform: uppercase;
+  text-align: center;
+  margin-left: 10%;
+  width: 67%;
+  text-wrap: balance;
+  max-width: 400px;
+  word-wrap: break-word;
+}
+
+.plus{
+  width:70px;
+  height: 70px;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.close{
+  transform: rotate(45deg);
+}
+
+.trash{
+  margin-top: 10px;
+  margin-right: 10px;
+  width: 60px;
+  height: 60px;
+}
