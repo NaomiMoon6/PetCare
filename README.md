@@ -1,6 +1,6 @@
 # PetCare
 
-Aplicativo Eletron para cadastro de pets com registros de lembretes e vacinas respectivos.
+Aplicativo Electron para cadastro de pets com registros de lembretes e vacinas respectivos.
 
 Permite adicionar, visualizar e excluir pets, lembretes e aplicações de vacina.
 
