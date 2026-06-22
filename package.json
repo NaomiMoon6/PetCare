@@ -1,6 +1,6 @@
 {
   "name": "PetCare",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "PetCare desktop application",
   "main": "main.js",
   "scripts": {
@@ -35,10 +35,11 @@
     "mac": {
       "target": "dmg",
       "category": "public.app-category.utilities",
-      "icon": "build/icon.icon"
+      "icon": "build/icon.icns"
     },
     "win": {
-      "target": "nsis"
+      "target": "nsis",
+      "icon": "build/icon.ico"
     }
   }
 }
