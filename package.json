@@ -37,7 +37,7 @@
       "category": "public.app-category.utilities",
       "icon": "build/icon.icns",
       "identity": null
-    }
+    },
     "win": {
       "target": "nsis",
       "icon": "build/icon.ico"
