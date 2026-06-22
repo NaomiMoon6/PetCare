@@ -8,6 +8,8 @@ Desenvolvido como trabalho da faculdade de Análise e Desenvolvimento de Sistema
 
 ![Pagina Principal](assets/MainPage.png)
 
+# VERSÃO RELEASE 1.0 EM BREVE
+
 ## Roadmap
 
 ### Concluído
