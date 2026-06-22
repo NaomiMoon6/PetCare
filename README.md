@@ -20,9 +20,10 @@ Desenvolvido como trabalho da faculdade de Análise e Desenvolvimento de Sistema
 - Proxima dose de vacinas;
 - Interface clara e escura;
 - Upload de imagens + imagens padrão;
+- Notificações de Lembretes;
 
 ### Em Andamento
-- Ativar Notificações;
+- Suporte para Mac;
 
 ### Updates Futuros
 - Otimizações/reestruturação do código;
