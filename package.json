@@ -1,6 +1,6 @@
 {
   "name": "PetCare",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "PetCare desktop application",
   "main": "main.js",
   "scripts": {
